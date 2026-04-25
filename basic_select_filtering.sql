@@ -1,12 +1,19 @@
--- Day 1 SQL Practice
+-- Project: Basic SQL Filtering Practice
+-- Goal: Practice SELECT, WHERE, and ORDER BY queries
 
--- Select all data
-SELECT * FROM customers;
+-- 1. Retrieve all records from the table
+SELECT * FROM Customers;
 
--- Filter data
-SELECT * FROM customers
-WHERE age > 30;
+-- 2. Retrieve specific columns
+SELECT customerName, city, country
+FROM Customers;
 
--- Sort data
-SELECT * FROM customers
-ORDER BY age DESC;
+-- 3. Filter customers by country
+SELECT customerName, city, country
+FROM Customers
+WHERE country = 'Canada';
+
+-- 4. Sort customers by name
+SELECT customerName, city, country
+FROM Customers
+ORDER BY customerName ASC;
